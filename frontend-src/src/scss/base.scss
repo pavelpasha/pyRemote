@@ -1,0 +1,86 @@
+@import "variables";
+@import "notification";
+@import "sidebar";
+body {
+    background-color: #24292E;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+::-webkit-scrollbar { width: 8px; height: 3px;}
+::-webkit-scrollbar-track {  background-color: #646464;}
+::-webkit-scrollbar-track-piece { background-color: $bg_color_dark;}
+::-webkit-scrollbar-thumb { height: 50px; background-color: #666; border-radius: 3px;}
+::-webkit-scrollbar-corner { background-color: #646464;}
+::-webkit-resizer { background-color: #666;}
+
+.wrapper {
+    background-color: #31363F;
+    height: 100%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+}
+
+.table {
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    width: 100%;
+    table-layout: fixed;
+    th:nth-child(1) {
+        width: 50%;
+    }
+    th:nth-child(2) {
+        width: 50%;
+    }
+    th:nth-child(3) {
+        width: 50%;
+    }
+    th {
+        padding: 5px;
+        background: $bg_color_dark;
+        color: rgb(214, 216, 218);
+    }
+    td {
+        border-bottom: 2px solid #24292e;
+        border-right: 2px solid #24292e;
+        padding: 5px;
+        color: rgb(214, 216, 218);
+        text-align: center;
+    }
+    tr {
+        background-color: #31363F;
+    }
+    // td:nth-child(2):hover {
+    //     background-color: #474a4f;
+    // }
+    // td:hover {
+    //     background-color: #474a4f;
+    // }
+}
+
+.clickable {
+   
+    cursor: pointer;
+}
+.clickable:hover {
+    background-color: #474a4f;
+}
+.options-wrapper {
+    visibility: hidden;
+    float: left;
+    cursor: pointer;
+    //width: 20px;
+    //height: 10px;
+}
+
+.option {
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+}
+
