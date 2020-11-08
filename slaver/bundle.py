@@ -202,9 +202,6 @@ class TunnelReqMessage(ControlMessage):
             return "<HBBHB{}s".format(len(self.hostname)) 
         else:
             return "<HBBIB{}s".format(len(self.ser_name))
-
-
-
 """
 A socket bridge implementation was borrowed from this repository https://github.com/aploium/shootback
 I just little simplified it.
@@ -427,7 +424,6 @@ class SocketBridge ():
         # terminate another
         if not once and _another_conn in self.map:
             self._terminate(_another_conn, True)
-
 class AbstractTunnel:
     pass
 
@@ -669,6 +665,7 @@ class Slaver ():
         """ Handle message from server command socket
             type message: ControlMessage
         """
+        print("new message")
         if None == message:
             return
 

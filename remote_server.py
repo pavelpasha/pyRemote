@@ -364,7 +364,7 @@ class RemoteServer ():
             return "ERROR Client not found or offline"
 
         # First lets check if a tunnel with a requested options already opened
-        for _, tunnel in self._opened_tunnels.iteritems():
+        for _, tunnel in self._opened_tunnels.items():
             if tunnel.get_options() == options: # If does -> just return a coonection parameters
                 logging.debug("Requested tunnel already opened")
                 return '{{"status": "ok", "port": {0},"id": {1} }}'.format(str(tunnel.get_customer_port()),str(tunnel.get_communicate_port()))
